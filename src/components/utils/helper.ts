@@ -1,3 +1,6 @@
+export { default as logoDark } from "../../assets/logo-dark.jpg";
+export { default as logoWhite } from "../../assets/logo-white.png";
+
 export { default as ProductItem } from "../features/ProductItem.tsx";
 export { default as ScrollToTop } from "../features/ScrollToTop.tsx";
 export { default as SectionHeading } from "../features/SectionHeading.tsx";

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section-heading {
+  @apply text-4xl font-semibold;
+}
+
+.nav-item {
+  @apply flex;
+}
+.nav-link {
+  @apply px-2 py-4 text-sm;
+}
