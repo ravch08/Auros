@@ -2,6 +2,8 @@ export { default as banner01 } from "../../assets/banner-slide-1.jpg";
 export { default as banner02 } from "../../assets/banner-slide-2.jpg";
 export { default as logoDark } from "../../assets/logo-dark.jpg";
 export { default as logoWhite } from "../../assets/logo-white.png";
+export { default as MiniBannerChair } from "../../assets/minibanner-chair.jpg";
+export { default as MiniBannerLightings } from "../../assets/minibanner-lightings.jpg";
 export { default as product101 } from "../../assets/prod-101.jpg";
 export { default as product102 } from "../../assets/prod-102.jpg";
 export { default as product11 } from "../../assets/prod-11.jpg";
