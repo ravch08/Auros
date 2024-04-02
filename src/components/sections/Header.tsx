@@ -3,7 +3,7 @@ import { logoDark } from "../utils/helper";
 
 const Header = () => {
   return (
-    <header>
+    <header className="py-4">
       <div className="container flex items-center justify-between">
         <Link to="/">
           <img src={logoDark} alt="logo" />
