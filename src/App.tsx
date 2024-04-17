@@ -14,7 +14,6 @@ import {
   Page404,
   ProductsPage,
 } from "./components/utils/helper";
-import "./styles/App.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

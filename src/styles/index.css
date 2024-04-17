@@ -12,6 +12,11 @@ h4 {
 section {
   @apply py-24;
 }
+
+.container {
+  @apply mx-auto w-10/12 max-w-7xl;
+}
+
 .section-heading {
   @apply text-4xl font-semibold;
 }
