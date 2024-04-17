@@ -11,7 +11,7 @@ module.exports = {
         sans: ["Lato", "sans-serif"],
       },
       backgroundImage: {
-        "mid-banner": "url('./src/assets/bg-banner.jpg')",
+        "mid-banner": "url('./src/assets/newsletter_bg.jpg')",
       },
     },
   },

@@ -1,0 +1,164 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "price": 21.5,
+      "discount": 10,
+      "title": "Teapot",
+      "priceCrossed": 23.9,
+      "tags": ["new", "pack"],
+      "imgSrc11": "./src/assets/prod-11.jpg",
+      "imgSrc12": "./src/assets/prod-12.jpg"
+    },
+    {
+      "id": 2,
+      "price": 28.7,
+      "discount": 20,
+      "title": "Miro Dining Table",
+      "priceCrossed": 35.9,
+      "tags": ["new", "pack"],
+      "imgSrc11": "./src/assets/prod-21.jpg",
+      "imgSrc12": "./src/assets/prod-22.jpg"
+    },
+    {
+      "id": 3,
+      "price": 29.2,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Janos Table Lamp",
+      "tags": ["new"],
+      "imgSrc11": "./src/assets/prod-31.jpg",
+      "imgSrc12": "./src/assets/prod-32.jpg"
+    },
+    {
+      "id": 4,
+      "price": 29,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Discus Floor and Table",
+      "tags": ["new"],
+      "imgSrc11": "./src/assets/prod-41.jpg",
+      "imgSrc12": "./src/assets/prod-42.jpg"
+    },
+    {
+      "id": 5,
+      "price": 29,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "UNA Chair",
+      "tags": ["new"],
+      "imgSrc11": "./src/assets/prod-51.jpg",
+      "imgSrc12": "./src/assets/prod-52.jpg"
+    },
+    {
+      "id": 6,
+      "price": 11.9,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Studio Chair",
+      "tags": ["new"],
+      "imgSrc11": "./src/assets/prod-61.jpg",
+      "imgSrc12": "./src/assets/prod-62.jpg"
+    },
+    {
+      "id": 7,
+      "price": 11.9,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Nude",
+      "tags": [],
+      "imgSrc11": "./src/assets/prod-71.jpg",
+      "imgSrc12": "./src/assets/prod-72.jpg"
+    },
+    {
+      "id": 8,
+      "price": 21.5,
+      "discount": 10,
+      "title": "Teapot",
+      "priceCrossed": 23.9,
+      "tags": [],
+      "imgSrc11": "./src/assets/prod-81.jpg",
+      "imgSrc12": "./src/assets/prod-82.jpg"
+    },
+    {
+      "id": 9,
+      "price": 28.7,
+      "discount": 20,
+      "title": "Miro Dining Table",
+      "priceCrossed": 35.9,
+      "tags": ["pack"],
+      "imgSrc11": "./src/assets/prod-91.jpg",
+      "imgSrc12": "./src/assets/prod-92.jpg"
+    },
+    {
+      "id": 10,
+      "price": 29.2,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Janos Table Lamp",
+      "tags": ["pack"],
+      "imgSrc11": "./src/assets/prod-101.jpg",
+      "imgSrc12": "./src/assets/prod-102.jpg"
+    },
+    {
+      "id": 11,
+      "price": 29,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Discus Floor and Table",
+      "tags": [],
+      "imgSrc11": "./src/assets/prod-111.jpg",
+      "imgSrc12": "./src/assets/prod-112.jpg"
+    },
+    {
+      "id": 12,
+      "price": 29,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "UNA Chair",
+      "tags": ["pack"],
+      "imgSrc11": "./src/assets/prod-121.jpg",
+      "imgSrc12": "./src/assets/prod-122.jpg"
+    },
+    {
+      "id": 13,
+      "price": 11.9,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Studio Chair",
+      "tags": [],
+      "imgSrc11": "./src/assets/prod-131.jpg",
+      "imgSrc12": "./src/assets/prod-132.jpg"
+    },
+    {
+      "id": 14,
+      "price": 11.9,
+      "discount": 0,
+      "priceCrossed": 0,
+      "title": "Nude",
+      "tags": ["pack"],
+      "imgSrc11": "./src/assets/prod-141.jpg",
+      "imgSrc12": "./src/assets/prod-142.jpg"
+    },
+    {
+      "id": 15,
+      "price": 21.5,
+      "discount": 10,
+      "title": "Teapot",
+      "priceCrossed": 23.9,
+      "tags": ["pack"],
+      "imgSrc11": "./src/assets/prod-151.jpg",
+      "imgSrc12": "./src/assets/prod-152.jpg"
+    },
+    {
+      "id": 16,
+      "price": 28.7,
+      "discount": 20,
+      "title": "Miro Dining Table",
+      "priceCrossed": 35.9,
+      "tags": [],
+      "imgSrc11": "./src/assets/prod-161.jpg",
+      "imgSrc12": "./src/assets/prod-162.jpg"
+    }
+  ]
+}

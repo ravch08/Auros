@@ -3,3 +3,20 @@
   max-width: 1200px;
   margin-inline: auto;
 }
+
+.img-top {
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+.img-top:hover {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.img-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
