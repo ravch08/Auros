@@ -1,33 +1,83 @@
-import { CartProps } from "../utils/api";
+import { ProductAddProps } from "../utils/api";
 
-const CartListItem = (props: CartProps) => {
-  const { title, imgSrc11, price, priceCrossed, quantity } = props;
+const CartListItem = (props: ProductAddProps) => {
+  const {
+    title,
+    imgSrc11,
+    price,
+    priceCrossed,
+    quantity,
+    deleteCart,
+    incrementQty,
+    decrementQty,
+  } = props;
 
   return (
-    <div className="mb-4 flex items-center justify-between gap-2 border-b border-slate-200">
-      <figure className="mr-4 w-28">
-        <img src={imgSrc11} alt={title} />
-      </figure>
+    <div className="mb-4 flex items-center justify-between gap-2 border-b border-slate-200 py-4">
+      <div className="flex items-center gap-4">
+        <figure className="mr-4 w-28">
+          <img src={imgSrc11} alt={title} />
+        </figure>
 
-      <div className="flex flex-col">
-        <h3>{title}</h3>
-        <div className="flex items-center gap-3">
-          <span className="text-gray-400 line-through">${priceCrossed}</span>
-          <span className="text-black">${price}</span>
+        <div className="flex w-32 flex-col items-start gap-2">
+          <h3 className="text-sm">{title}</h3>
+          <div className="flex items-center gap-3">
+            {priceCrossed ? (
+              <span className="text-sm text-gray-400 line-through">
+                ${priceCrossed}
+              </span>
+            ) : null}
+            <span className="text-sm text-black">${price}</span>
+          </div>
         </div>
       </div>
-      <input
-        type="number"
-        id="product-count"
-        name="product-count"
-        value={quantity}
-        className="w-16 rounded-sm bg-gray-200 p-2"
-      />
+
+      <div className="flex">
+        <button className="bg-slate-400 px-2" onClick={decrementQty}>
+          <svg
+            viewBox="0 0 24 24"
+            fill="white"
+            className="h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+
+        <input
+          type="text"
+          value={quantity}
+          id="product-count"
+          name="product-count"
+          onChange={() => {}}
+          className="w-12 rounded-sm bg-gray-200 p-2 text-center"
+        />
+
+        <button className="bg-slate-400 px-2" onClick={incrementQty}>
+          <svg
+            viewBox="0 0 24 24"
+            fill="white"
+            className="h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
       <span>
         <strong>${price * quantity}</strong>
       </span>
 
-      <button>
+      <button className="bg-slate-100 px-2" onClick={deleteCart}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

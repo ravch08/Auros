@@ -16,7 +16,6 @@ import {
   ProductsPage,
   Wishlist,
 } from "./components/utils/helper";
-import { fetchProducts } from "./store/CartSlice";
 import store from "./store/store";
 
 const router = createBrowserRouter(
@@ -40,15 +39,13 @@ export const queryClient = new QueryClient({
   },
 });
 
-store.dispatch(fetchProducts());
-
 function App() {
   return (
-    <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
         <RouterProvider router={router} />
-      </QueryClientProvider>
-    </Provider>
+      </Provider>
+    </QueryClientProvider>
   );
 }
 

@@ -38,6 +38,9 @@ const cartSchema = z.object({
 const addToSchema = z.object({
   addCart: z.function(),
   addWishlist: z.function(),
+  incrementQty: z.function(),
+  decrementQty: z.function(),
+  deleteCart: z.function(),
 });
 
 const productAddSchema = productsSchema.merge(addToSchema);

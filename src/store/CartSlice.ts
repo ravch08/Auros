@@ -1,40 +1,31 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
-export const fetchProducts = createAsyncThunk(
-  "cart/fetchProducts",
-  async () => {
-    const response = await fetch("http://localhost:3000/products");
-    const data = await response.json();
-    return data;
-  },
-);
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { CartProps, ProductsProps } from "../components/utils/api";
 
 const initialState = {
   cart: [],
-  items: [],
   wishlist: [],
-  quantity: 0,
-  isError: false,
-  isLoading: false,
+  totalPrice: 0,
+  totalCartQuantity: 0,
 };
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart(state, action) {
+    addToCart(state, action: PayloadAction<ProductsProps>) {
       const elIdx = state?.cart.findIndex(
         (item) => item.id === action.payload.id,
       );
 
-      if (elIdx >= 0) {
+      if (elIdx !== -1) {
         state.cart[elIdx].quantity += 1;
       } else {
         const cartItem = { ...action.payload, quantity: 1 };
         state.cart.push(cartItem);
       }
     },
-    addToWishlist(state, action) {
+
+    addToWishlist(state, action: PayloadAction<CartProps>) {
       const elIdx = state?.wishlist.findIndex(
         (item) => item.id === action.payload.id,
       );
@@ -46,21 +37,53 @@ const cartSlice = createSlice({
         state.wishlist.push(cartItem);
       }
     },
-  },
-  extraReducers: (builder) => {
-    builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      state.isLoading = false;
-      state.items = action.payload;
-    });
-    builder.addCase(fetchProducts.pending, (state) => {
-      state.isLoading = true;
-    });
-    builder.addCase(fetchProducts.rejected, (state, action) => {
-      console.log("Error", action.payload);
-      state.isError = true;
-    });
+
+    deleteFromCart: (state, action: PayloadAction<CartProps>) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+    },
+
+    getCartTotal: (state) => {
+      let totalPrice = 0;
+      let totalCartQuantity = 0;
+
+      state.cart.forEach((cartItem) => {
+        const { price, quantity } = cartItem;
+        const itemTotal = quantity * price;
+        totalPrice += itemTotal;
+        totalCartQuantity += quantity;
+      });
+
+      state.totalCartQuantity = totalCartQuantity;
+      state.totalPrice = parseFloat(totalPrice.toFixed(2));
+    },
+
+    incrementQuantity: (state, action) => {
+      state.cart = state.cart.map((item) => {
+        if (item.id === action.payload.id) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+    },
+
+    decrementQuantity: (state, action) => {
+      state.cart = state.cart.map((item) => {
+        if (item.id === action.payload.id) {
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      });
+    },
   },
 });
 
-export const { addToCart, addToWishlist, deleteFromCart } = cartSlice.actions;
+export const {
+  addToCart,
+  addToWishlist,
+  deleteFromCart,
+  getCartTotal,
+  incrementQuantity,
+  decrementQuantity,
+} = cartSlice.actions;
+
 export default cartSlice.reducer;
