@@ -10,7 +10,7 @@ h4 {
 }
 
 section {
-  @apply py-32;
+  @apply py-24;
 }
 .section-heading {
   @apply text-4xl font-semibold;
@@ -24,4 +24,12 @@ section {
 }
 .nav-link.active {
   @apply font-bold;
+}
+
+.scrollTop {
+  @apply fixed bottom-8 right-8 z-20 flex h-12 w-12 scale-0 cursor-pointer items-center justify-center rounded-full bg-primary shadow-lg transition-transform duration-300 ease-in-out hover:bg-primary;
+
+  &.show {
+    @apply scale-100;
+  }
 }

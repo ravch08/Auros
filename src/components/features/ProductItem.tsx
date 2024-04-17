@@ -5,7 +5,7 @@ const ProductItem = (props: ProductsProps) => {
     props;
 
   return (
-    <div className="mb-6 w-[80%] sm:w-[45%] md:w-[30%]">
+    <div className="mb-6 w-[80%] sm:w-[45%] md:w-[30%] xl:w-[22%]">
       <figure className="relative overflow-hidden rounded-md">
         <img src={imgSrc11} alt={title} className="img-top" />
         <img src={imgSrc12} alt={title} className="img-bottom" />

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { SocialIcons, logoDark } from "../utils/helper";
+import { ScrollToTop, SocialIcons, logoDark } from "../utils/helper";
 
 const Footer = () => {
   return (
@@ -45,6 +45,7 @@ const Footer = () => {
           <p>Copyright © 2019 Auros. All rights reserved.</p>
         </div>
       </div>
+      <ScrollToTop />
     </footer>
   );
 };
