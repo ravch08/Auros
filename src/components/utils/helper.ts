@@ -1,5 +1,7 @@
 export { default as banner01 } from "../../assets/banner-slide-1.jpg";
 export { default as banner02 } from "../../assets/banner-slide-2.jpg";
+export { default as banner03 } from "../../assets/banner-slide-3.jpg";
+export { default as banner04 } from "../../assets/banner-slide-4.jpg";
 export { default as logoDark } from "../../assets/logo-dark.jpg";
 export { default as logoWhite } from "../../assets/logo-white.png";
 export { default as MiniBannerChair } from "../../assets/minibanner-chair.jpg";
@@ -37,6 +39,7 @@ export { default as product82 } from "../../assets/prod-82.jpg";
 export { default as product91 } from "../../assets/prod-91.jpg";
 export { default as product92 } from "../../assets/prod-92.jpg";
 
+export { default as PageBanner } from "../features/PageBanner.tsx";
 export { default as ProductItem } from "../features/ProductItem.tsx";
 export { default as ScrollToTop } from "../features/ScrollToTop.tsx";
 export { default as SectionHeading } from "../features/SectionHeading.tsx";
@@ -47,6 +50,7 @@ export { default as Contact } from "../pages/Contact.tsx";
 export { default as Home } from "../pages/Home.tsx";
 export { default as Page404 } from "../pages/Page404.tsx";
 export { default as ProductsPage } from "../pages/ProductsPage.tsx";
+export { default as Wishlist } from "../pages/Wishlist.tsx";
 
 export { default as Banner } from "../sections/Banner.tsx";
 export { default as Footer } from "../sections/Footer.tsx";

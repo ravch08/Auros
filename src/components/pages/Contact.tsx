@@ -1,5 +1,11 @@
+import { banner03, PageBanner } from "../utils/helper";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <main>
+      <PageBanner bannerImg={banner03} />
+    </main>
+  );
 };
 
 export default Contact;

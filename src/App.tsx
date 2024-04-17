@@ -13,6 +13,7 @@ import {
   Layout,
   Page404,
   ProductsPage,
+  Wishlist,
 } from "./components/utils/helper";
 
 const router = createBrowserRouter(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="wishlist" element={<Wishlist />} />
       <Route path="contact" element={<Contact />} />
       <Route path="products" element={<ProductsPage />} />
       <Route path="*" element={<Page404 />} />
