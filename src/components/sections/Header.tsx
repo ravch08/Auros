@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { logoDark } from "../utils/helper";
 
 const Header = () => {
+  const [isSticky, setIsSticky] = useState("");
+
+  const stickyHandler = () => {
+    const stickyClass = window.scrollY > 150 ? "sticky" : "";
+    setIsSticky(stickyClass);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickyHandler);
+    return () => window.removeEventListener("scroll", stickyHandler);
+  }, []);
+
+  const sticker = `${isSticky} header-class`;
+
   return (
-    <header className="py-4">
+    <header className={sticker}>
       <div className="container flex items-center justify-between">
         <Link to="/">
           <img src={logoDark} alt="logo" />

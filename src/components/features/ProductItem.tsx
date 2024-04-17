@@ -1,11 +1,21 @@
-import { ProductsProps } from "../utils/api";
+import { Link } from "react-router-dom";
+import { ProductAddProps } from "../utils/api";
 
-const ProductItem = (props: ProductsProps) => {
-  const { title, tags, imgSrc11, imgSrc12, discount, price, priceCrossed } =
-    props;
+const ProductItem = (props: ProductAddProps) => {
+  const {
+    title,
+    tags,
+    imgSrc11,
+    imgSrc12,
+    discount,
+    price,
+    priceCrossed,
+    addCart,
+    addWishlist,
+  } = props;
 
   return (
-    <div className="mb-6 w-[80%] sm:w-[45%] md:w-[30%] xl:w-[22%]">
+    <Link to="#!" className="mb-6 w-[80%] sm:w-[45%] md:w-[30%] xl:w-[22%]">
       <figure className="group relative overflow-hidden rounded-md">
         <img
           src={imgSrc11}
@@ -19,7 +29,7 @@ const ProductItem = (props: ProductsProps) => {
         />
 
         <div className="absolute left-4 top-3 flex flex-col items-start gap-2">
-          {tags?.map((tag) => (
+          {tags?.map((tag: string) => (
             <span className="text-xs uppercase" key={tag}>
               {tag}
             </span>
@@ -31,7 +41,7 @@ const ProductItem = (props: ProductsProps) => {
         </div>
 
         <div className="absolute -bottom-8 left-1/2 flex -translate-x-1/2 items-center justify-around gap-3 transition-all duration-300 ease-in-out group-hover:bottom-8">
-          <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white transition-colors duration-300 ease-in-out hover:bg-primary">
+          <div className="product-cta">
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -45,7 +55,7 @@ const ProductItem = (props: ProductsProps) => {
               />
             </svg>
           </div>
-          <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white transition-colors duration-300 ease-in-out hover:bg-primary">
+          <div className="product-cta" onClick={addCart}>
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -59,7 +69,7 @@ const ProductItem = (props: ProductsProps) => {
               />
             </svg>
           </div>
-          <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white transition-colors duration-300 ease-in-out hover:bg-primary">
+          <div className="product-cta" onClick={addWishlist}>
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -69,7 +79,7 @@ const ProductItem = (props: ProductsProps) => {
               <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
             </svg>
           </div>
-          <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white transition-colors duration-300 ease-in-out hover:bg-primary">
+          <div className="product-cta">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -92,7 +102,7 @@ const ProductItem = (props: ProductsProps) => {
           <span className="text-sm text-black">${price}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,3 +1,5 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Provider } from "react-redux";
 import {
   Route,
   RouterProvider,
@@ -5,7 +7,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Cart,
   Contact,
@@ -15,6 +16,8 @@ import {
   ProductsPage,
   Wishlist,
 } from "./components/utils/helper";
+import { fetchProducts } from "./store/CartSlice";
+import store from "./store/store";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,11 +40,15 @@ export const queryClient = new QueryClient({
   },
 });
 
+store.dispatch(fetchProducts());
+
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </Provider>
   );
 }
 

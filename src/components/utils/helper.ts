@@ -39,6 +39,7 @@ export { default as product82 } from "../../assets/prod-82.jpg";
 export { default as product91 } from "../../assets/prod-91.jpg";
 export { default as product92 } from "../../assets/prod-92.jpg";
 
+export { default as CartListItem } from "../features/CartListItem.tsx";
 export { default as PageBanner } from "../features/PageBanner.tsx";
 export { default as ProductItem } from "../features/ProductItem.tsx";
 export { default as ScrollToTop } from "../features/ScrollToTop.tsx";
@@ -53,6 +54,8 @@ export { default as ProductsPage } from "../pages/ProductsPage.tsx";
 export { default as Wishlist } from "../pages/Wishlist.tsx";
 
 export { default as Banner } from "../sections/Banner.tsx";
+export { default as CartCheckout } from "../sections/CartCheckout.tsx";
+export { default as CartList } from "../sections/CartList.tsx";
 export { default as Footer } from "../sections/Footer.tsx";
 export { default as Header } from "../sections/Header.tsx";
 export { default as Layout } from "../sections/Layout.tsx";
