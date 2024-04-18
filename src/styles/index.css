@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  @apply w-2;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-slate-200;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-amber-500;
+}
+
 h1,
 h2,
 h3,
@@ -18,7 +30,7 @@ section {
 }
 
 .section-heading {
-  @apply text-4xl font-semibold;
+  @apply mb-4 text-4xl font-semibold;
 }
 
 .nav-item {
@@ -48,5 +60,21 @@ section {
 
   &.sticky {
     @apply fixed left-0 top-0 w-full py-0 shadow-lg;
+  }
+}
+
+.cart-list {
+  @apply h-[400px] w-[65%] overflow-auto bg-amber-50 p-4 text-center;
+
+  &::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-amber-500;
   }
 }

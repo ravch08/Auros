@@ -13,7 +13,6 @@ import {
   Home,
   Layout,
   Page404,
-  ProductsPage,
   Wishlist,
 } from "./components/utils/helper";
 import store from "./store/store";
@@ -25,7 +24,6 @@ const router = createBrowserRouter(
       <Route path="cart" element={<Cart />} />
       <Route path="wishlist" element={<Wishlist />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="products" element={<ProductsPage />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

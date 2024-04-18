@@ -3,6 +3,7 @@
     {
       "id": 1,
       "price": 21.5,
+      "quantity": 1,
       "discount": 10,
       "title": "Teapot",
       "priceCrossed": 23.9,
@@ -13,6 +14,7 @@
     {
       "id": 2,
       "price": 28.7,
+      "quantity": 1,
       "discount": 20,
       "title": "Miro Dining Table",
       "priceCrossed": 35.9,
@@ -23,6 +25,7 @@
     {
       "id": 3,
       "price": 29.2,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Janos Table Lamp",
@@ -33,6 +36,7 @@
     {
       "id": 4,
       "price": 29,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Discus Floor and Table",
@@ -43,6 +47,7 @@
     {
       "id": 5,
       "price": 29,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "UNA Chair",
@@ -53,6 +58,7 @@
     {
       "id": 6,
       "price": 11.9,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Studio Chair",
@@ -63,6 +69,7 @@
     {
       "id": 7,
       "price": 11.9,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Nude",
@@ -73,6 +80,7 @@
     {
       "id": 8,
       "price": 21.5,
+      "quantity": 1,
       "discount": 10,
       "title": "Teapot",
       "priceCrossed": 23.9,
@@ -83,6 +91,7 @@
     {
       "id": 9,
       "price": 28.7,
+      "quantity": 1,
       "discount": 20,
       "title": "Miro Dining Table",
       "priceCrossed": 35.9,
@@ -93,6 +102,7 @@
     {
       "id": 10,
       "price": 29.2,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Janos Table Lamp",
@@ -103,6 +113,7 @@
     {
       "id": 11,
       "price": 29,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Discus Floor and Table",
@@ -113,6 +124,7 @@
     {
       "id": 12,
       "price": 29,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "UNA Chair",
@@ -123,6 +135,7 @@
     {
       "id": 13,
       "price": 11.9,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Studio Chair",
@@ -133,6 +146,7 @@
     {
       "id": 14,
       "price": 11.9,
+      "quantity": 1,
       "discount": 0,
       "priceCrossed": 0,
       "title": "Nude",
@@ -143,6 +157,7 @@
     {
       "id": 15,
       "price": 21.5,
+      "quantity": 1,
       "discount": 10,
       "title": "Teapot",
       "priceCrossed": 23.9,
@@ -153,6 +168,7 @@
     {
       "id": 16,
       "price": 28.7,
+      "quantity": 1,
       "discount": 20,
       "title": "Miro Dining Table",
       "priceCrossed": 35.9,

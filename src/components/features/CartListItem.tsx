@@ -1,4 +1,4 @@
-import { ProductAddProps } from "../utils/api";
+import { ProductAddProps } from "../../types/types";
 
 const CartListItem = (props: ProductAddProps) => {
   const {
@@ -74,7 +74,7 @@ const CartListItem = (props: ProductAddProps) => {
       </div>
 
       <span>
-        <strong>${price * quantity}</strong>
+        <strong>${price * quantity!}</strong>
       </span>
 
       <button className="bg-slate-100 px-2" onClick={deleteCart}>

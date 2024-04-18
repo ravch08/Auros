@@ -30,11 +30,11 @@ const cartSlice = createSlice({
         (item) => item.id === action.payload.id,
       );
 
-      if (elIdx >= 0) {
-        state.wishlist[elIdx].quantity += 1;
-      } else {
+      if (elIdx === -1) {
         const cartItem = { ...action.payload, quantity: 1 };
         state.wishlist.push(cartItem);
+      } else {
+        return;
       }
     },
 

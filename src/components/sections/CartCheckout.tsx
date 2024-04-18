@@ -8,11 +8,11 @@ const CartCheckout = () => {
       <div className="flex flex-col">
         <div className="flex items-center justify-between">
           <p>Total Items: </p>
-          <span>{totalCartQuantity && 1}</span>
+          <span>{totalCartQuantity}</span>
         </div>
         <div className="flex items-center justify-between">
           <p>Shipping Cost: </p>
-          <span>${totalPrice && 1}</span>
+          <span>${totalPrice}</span>
         </div>
         <div className="flex items-center justify-between">
           <p>Tax: </p>

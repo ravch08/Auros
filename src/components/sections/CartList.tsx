@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   decrementQuantity,
   deleteFromCart,
   incrementQuantity,
 } from "../../store/CartSlice";
-import CartListItem from "../features/CartListItem";
-import { ProductAddProps } from "../utils/api";
+import { ProductAddProps } from "../../types/types";
+import { CartListItem } from "../utils/helper";
 
 const CartList = () => {
   const { cart } = useSelector((store) => store.cart);
@@ -13,7 +14,7 @@ const CartList = () => {
   const dispatch = useDispatch();
 
   return (
-    <section className="h-[400px] w-[65%] overflow-auto bg-amber-50 p-4 text-center">
+    <section className="cart-list">
       {cart?.length === 0 ? <h2>Add items to the Cart!</h2> : null}
       {cart?.length > 0
         ? cart?.map((item: ProductAddProps) => (

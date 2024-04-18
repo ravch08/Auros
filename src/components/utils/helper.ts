@@ -50,7 +50,6 @@ export { default as Cart } from "../pages/Cart.tsx";
 export { default as Contact } from "../pages/Contact.tsx";
 export { default as Home } from "../pages/Home.tsx";
 export { default as Page404 } from "../pages/Page404.tsx";
-export { default as ProductsPage } from "../pages/ProductsPage.tsx";
 export { default as Wishlist } from "../pages/Wishlist.tsx";
 
 export { default as Banner } from "../sections/Banner.tsx";
